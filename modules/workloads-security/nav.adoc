@@ -1,1 +1,3 @@
 * xref:admission-controllers.adoc[Admission Controllers]
+* Functional Programming
+** xref:lambdas.adoc[Lambdas]
