@@ -1,0 +1,76 @@
+= Admission Controllers
+
+== Admission Controllers (Plugins)
+
+* `AlwaysPullImages` - Override all by setting images
+* `LimitRange`
+** This admission controller will observe the incoming request and ensure that it does not violate any of the constraints enumerated in the `LimitRange` object in a `Namespace`
+** If you are using LimitRange objects in your Kubernetes deployment, you MUST use this admission controller to enforce those constraints
+* `Resource Quota`
+** This admission controller will observe the incoming request and ensure that it does not violate any of the constraints enumerated in the `ResourceQuota` object in a `Namespace`. 
+** If you are using `ResourceQuota` objects in your Kubernetes deployment, you MUST use this admission controller to enforce quota constraints.
+** A resource quota, defined by a `ResourceQuota` object, provides constraints that limit aggregate resource consumption per `namespace`
+** Example:
+*** In a cluster with a capacity of 32 GiB RAM, and 16 cores, let team A use 20 GiB and 10 cores, let B use 10GiB and 4 cores, and hold 2GiB and 2 cores in reserve for future allocation.
+*** Limit the "testing" namespace to using 1 core and 1GiB RAM. Let the "production" namespace use any amount.
+
+== Differences between `ResourceQuota` and `LimitRange`
+
+* ResourceQuota is for limiting the total resource consumption of a `namespace`, for example:
+
+[source, yaml, subs="attributes,quotes,verbatim"]
+----
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: object-counts
+spec:
+  hard:
+    configmaps: "10" 
+    persistentvolumeclaims: "4" 
+    replicationcontrollers: "20" 
+    secrets: "10" 
+    services: "10"
+----
+
+* LimitRange is for managing constraints at a pod and container level within the project.
+
+[source, yaml, subs="attributes,quotes,verbatim"]
+----
+apiVersion: "v1"
+kind: "LimitRange"
+metadata:
+  name: "resource-limits" 
+spec:
+  limits:
+    -
+      type: "Pod"
+      max:
+        cpu: "2" 
+        memory: "1Gi" 
+      min:
+        cpu: "200m" 
+        memory: "6Mi" 
+    -
+      type: "Container"
+      max:
+        cpu: "2" 
+        memory: "1Gi" 
+      min:
+        cpu: "100m" 
+        memory: "4Mi" 
+      default:
+        cpu: "300m" 
+        memory: "200Mi" 
+      defaultRequest:
+        cpu: "200m" 
+        memory: "100Mi" 
+      maxLimitRequestRatio:
+        cpu: "10" 
+----
+
+== Mutating Admission
+
+* Admission controllers may be "validating", "mutating", or both
+* Mutating controllers may modify the objects they admit
+* Validating controllers may not
