@@ -15,7 +15,7 @@
 
 == Ok never mind, let's code
 
-[javascript]
+ [source, javascript, subs="attributes,quotes,verbatim"]
 ----
 var s = 30;
 function factorial(s) {
