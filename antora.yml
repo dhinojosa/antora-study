@@ -3,3 +3,4 @@ title: "Sample Antora Project"
 version : "0.1.0"
 nav:
 - modules/ROOT/nav.adoc
+- modules/volumes/nav.adoc
