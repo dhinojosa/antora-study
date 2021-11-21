@@ -1,2 +1,1 @@
-* Admission Controllers
-** xref:admission-controllers.adoc[Admission Controllers]
+* xref:admission-controllers.adoc[Admission Controllers]
