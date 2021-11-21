@@ -1,7 +1,5 @@
 = Admission Controllers
 
-== Admission Controllers (Plugins)
-
 * `AlwaysPullImages` - Override all by setting images
 * `LimitRange`
 ** This admission controller will observe the incoming request and ensure that it does not violate any of the constraints enumerated in the `LimitRange` object in a `Namespace`
