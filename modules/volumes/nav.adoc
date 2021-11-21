@@ -1,1 +1,4 @@
 * xref:index.adoc[About Volumes]
+* Notes
+** https://www.kubernetes.io/docs/user-guide/volumes/nfs/[Kubernetes NFS Volumes]
+** https://kubernetes.io/docs/user-guide/persistent-volumes-claims/[Kubernetes Persistent Volume Claims]
