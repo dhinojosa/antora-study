@@ -26,3 +26,10 @@ function factorial(s) {
     return result;
 }
 ----
+
+=== Crud! I forgot about levels, how does that look?
+
+* There is one
+* There are two
+* Amazing, there are three
+* Cuando tiene tres, puede ser cuatro
