@@ -1,7 +1,10 @@
 site:
   title: Main Playbook
   url: https://www.main_playbook.com
-  start_page: ROOT::pages/index.adoc
+  start_page: antora-study::pages/index.adoc
+sources:
+  - url: git@github.com:dhinojosa/antora-study.git
+    branches: main
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
