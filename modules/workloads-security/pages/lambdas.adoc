@@ -22,7 +22,7 @@ ____
 * Comes closer to have "concrete" method in an "interface" by composing other `abstract` methods.
 
 .Default Method Arbitrary Example
-[source, java, subs="verbatim,quotes"]
+[source%linenum, java, subs="verbatim,quotes", highlight=4..7]
 ----
 public interface Human {
    public String getFirstName();
