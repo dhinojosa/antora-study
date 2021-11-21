@@ -1,0 +1,28 @@
+= Introduction
+
+== Items that are at play
+
+* A list of items
+* A list of items with a header
+* A list of items with a footer
+* A list of items with a header and footer
+
+== Wow ok, that was weird
+
+. Where is this going?
+. What are the items?
+. Can we have a fake name?
+
+== Ok never mind, let's code
+
+[javascript]
+----
+var s = 30;
+function factorial(s) {
+    var result = 1;
+    for (var i = 2; i <= s; i++) {
+        result *= i;
+    }
+    return result;
+}
+----
