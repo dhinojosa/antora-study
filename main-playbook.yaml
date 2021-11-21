@@ -1,0 +1,7 @@
+site:
+  title: Main Playbook
+  url: https://www.main_playbook.com
+  start_page: ROOT::pages/index.adoc
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
