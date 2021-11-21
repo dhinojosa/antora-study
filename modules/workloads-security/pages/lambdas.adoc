@@ -597,7 +597,7 @@ public static <T> List<T> myGenerate(MySupplier<T> supplier, int count) {}
 
 ==  Use `myGenerate` in *_FunctionsTest.java_*
 
-[source,java,subs="verbatim,quotes"]
+[source,java,linenums,subs="verbatim,quotes"]
 ----
 package com.xyzcorp;
 
