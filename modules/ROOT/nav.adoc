@@ -1,0 +1,3 @@
+. Core Stuff
+* xref:index.adoc[Starting Material]
+* xref:install.adoc[Installation and other items]
