@@ -1,2 +1,1 @@
-. Volumes
 * xref:index.adoc[About Volumes]

@@ -29,3 +29,12 @@ spec:
 
 When a user is done with their volume, they can delete the _PVC_ objects from the API that allows reclamation of the resource. The reclaim policy for a PersistentVolume tells the cluster what to do with the volume after it has been released of its claim. Currently, volumes can either be `Retained`, `Recycled`, or `Deleted`.
 
+CAUTION: Don't stick forks in electric sockets.
+
+TIP: After someone sticks a fork in a socket, you'll need to reset the circuit in the breaker box in the dark and scary basement.
+
+WARNING: Never go into the basement.
+
+IMPORTANT: A monster lives in the basement.
+
+NOTE: If you go into the basement, see if you can find Kenny's parka.
